@@ -1,12 +1,11 @@
 package com.example.springlearn;
 
 import com.example.springlearn.service.UserService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 /**
  * дефолтный скоуп спринг бина - синглтон
@@ -22,9 +21,13 @@ public class SpringLearnApplication implements ApplicationRunner {
 
     private final UserService userService;
 
+    private final ApplicationContext context;
+
 
     // 3 вариант инжекта/автовайринг/внедрение - через конструктор
-    public SpringLearnApplication(UserService userService) {
+    public SpringLearnApplication(UserService userService, ApplicationContext context) {
+
+        this.context = context;
 
         this.userService = userService;
     }
@@ -36,6 +39,8 @@ public class SpringLearnApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
+
+//        this.context.getBean(UserService.class);
 
         userService.getUserById(1L);
     }

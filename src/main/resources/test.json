@@ -1,0 +1,23 @@
+{
+  "firstName": "Monte",
+  "lastName": "Lowry",
+  "mobilePhone": "+52 562 902 8677",
+  "businessPhone": "+356 439 907 3820",
+  "email": "customer_admin@company2.com",
+  "jobCategory": "OTHER",
+  "jobTitle": "Administrator",
+  "address": {
+    "street": "Calle 39"
+  },
+  "channels": [
+    {
+      "name": "EMAIL"
+    },
+    {
+      "name": "EMAIL"
+    },
+    {
+      "name": "EMAIL"
+    }
+  ]
+}

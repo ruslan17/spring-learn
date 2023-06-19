@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserRepository {
 
+//    @Transactional
+    //    @HasRole
     public User getUserById(Long id) {
         return new User(1L, "John");
     }
